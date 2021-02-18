@@ -1,4 +1,12 @@
-public class Main {
+package com.mynimef;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.Group;
+import javafx.scene.text.Text;
+
+public class Main extends Application {
     public static void main(String[] args) {
         System.out.println("This is the neural network that makes digit recognition.");
 
@@ -7,7 +15,7 @@ public class Main {
         int[] neuronNum = { inputNum, 200, 50, outputNum };    //Number of neurons in each layer.
 
         if (Weights.checkWeights()) {
-            System.out.println("Weights file already exist");
+            System.out.println("com.mynimef.Weights file already exist");
         }
         else {
             int trainSet = 1000;    //Number of train sets (for learning).
@@ -75,5 +83,27 @@ public class Main {
         }
 
         System.out.println("The end.");
+
+        Application.launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) {
+        int width = 1280;
+        int height = 720;
+
+        // установка надписи
+        Text text = new Text("Coming soon!");
+        text.setLayoutY(height / 2.);    // установка положения надписи по оси Y
+        text.setLayoutX(width / 2.);   // установка положения надписи по оси X
+
+        Group group = new Group(text);
+
+        Scene scene = new Scene(group);
+        stage.setScene(scene);
+        stage.setTitle("Digit recognition");
+        stage.setWidth(width);
+        stage.setHeight(height);
+        stage.show();
     }
 }

@@ -1,3 +1,5 @@
+package com.mynimef;
+
 import java.util.Random;
 
 public class Perceptron {
@@ -14,7 +16,7 @@ public class Perceptron {
         sigma = new double[columnsNum];
     }
 
-    public void setRandomWeights() {  //Weights initialization and randomization.
+    public void setRandomWeights() {  //com.mynimef.Weights initialization and randomization.
         Random rand = new Random();
         for (int i = 0; i < linesNum; i++) {
             for (int j = 0; j < columnsNum; j++) {

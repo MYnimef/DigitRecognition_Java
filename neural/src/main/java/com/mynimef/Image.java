@@ -1,3 +1,5 @@
+package com.mynimef;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
@@ -8,7 +10,7 @@ public class Image {
     public static boolean toArray(double[] array, String fileName) {
         try {
             BufferedImage inputImage = ImageIO.read(new File(fileName));
-            final byte[] pixels = ((DataBufferByte) inputImage.getRaster().getDataBuffer()).getData(); // get pixel value as single array from buffered Image
+            final byte[] pixels = ((DataBufferByte) inputImage.getRaster().getDataBuffer()).getData(); // get pixel value as single array from buffered com.mynimef.Image
 
             for (int pixel = 0; pixel < pixels.length; pixel++) { //this loop allocates pixels value to two dimensional array
                 int argb = 0;

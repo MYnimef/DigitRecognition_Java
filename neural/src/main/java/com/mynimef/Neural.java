@@ -1,3 +1,5 @@
+package com.mynimef;
+
 public class Neural {
     public static void neuralLearning(int trainSet, int[] neuronNum, int hiddenLayersAmount, double[][] input, double[][] output) {
         double k = 0.3;  //Learning ratio
