@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mynimef.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mynimef.Controller">
    <children>
-      <Button layoutX="614.0" layoutY="477.0" mnemonicParsing="false" text="Button" />
-      <Label layoutX="626.0" layoutY="433.0" text="Label" />
+      <Button id="neuroButton" layoutX="614.0" layoutY="600.0" mnemonicParsing="false" onMouseClicked="#neuroStartClick" text="Button">
+      </Button>
+
+      <Canvas id="digitCanvas" height="400.0" layoutX="440.0" layoutY="160.0" width="400.0">
+      </Canvas>
    </children>
 </AnchorPane>
