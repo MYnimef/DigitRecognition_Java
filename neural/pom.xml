@@ -68,6 +68,12 @@
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,7 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
@@ -85,7 +91,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.2</version>
                 <executions>
                     <execution>
                         <goals>
